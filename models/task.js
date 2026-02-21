@@ -34,7 +34,7 @@ const taskSchema = new mongoose.Schema({
   }
 });
 
-// Cập nhật ngày sửa mỗi khi save
+
 taskSchema.pre('save', function(next) {
   this.ngayCapNhat = Date.now();
   next();
